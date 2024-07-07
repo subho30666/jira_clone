@@ -18,6 +18,7 @@ export const StyledContainer = styled.div`
   min-width: 200px;
   min-height: 500px;
   background-color: #f4f5f7;
+  overflow: hidden;
 `;
 export const Text = styled.div`
   margin: 10px 10px 20px;

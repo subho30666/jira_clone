@@ -1,8 +1,8 @@
-import React, { useState, useEffect, useMemo } from "react";
+import React, { useState, useEffect } from "react";
 import { getLocal, setLocal } from "../../../../Utils/localstorage";
 import { Flex } from "./style";
 import { SortableContext, verticalListSortingStrategy, arrayMove } from "@dnd-kit/sortable";
-import { DndContext, useSensor, useSensors, PointerSensor, rectIntersection, DragOverlay, closestCenter } from "@dnd-kit/core";
+import { DndContext, useSensor, useSensors, PointerSensor, rectIntersection, DragOverlay } from "@dnd-kit/core";
 import ItemPlaceholder from "./ItemPlaceholder";
 import DndContainer from "./DndContainer";
 import { filterDisplayedItems } from "../../../../Utils/utils";
@@ -13,9 +13,7 @@ function DndIssues() {
   const filteredItems = items.filter((item) => item.display === true);
   const [activeItems, setActiveItems] = useState(null);
 
-  const containerIds = useMemo(() => {
-    return containers.map((container) => container.id);
-  }, [containers]);
+  const containerIds = containers.map((container) => container.id);
 
   const handleNameChange = () => {
     const localItems = getLocal("items") || [];
@@ -25,7 +23,11 @@ function DndIssues() {
   useEffect(() => {
     handleNameChange();
 
-    const handleStorageEvent = () => handleNameChange();
+    const handleStorageEvent = () => {
+      // console.log("localStorageUpdated event triggered");
+      // console.log("items in local", getLocal("items"));
+      handleNameChange();
+    };
     window.addEventListener("localStorageUpdated", handleStorageEvent);
 
     return () => {
@@ -68,38 +70,32 @@ function DndIssues() {
     const { active, over } = event;
     if (!over || active.id === over.id) return;
 
-    const activeType = active.data?.current.type;
-    const overType = over.data?.current.type;
-    const activeContainer = active.data?.current.containerId;
-    const overContainer = over.data?.current.containerId || over.data.current.columnId;
-    const activeIndex = items.findIndex((item) => item.id === active.id);
-    const overIndex = items.findIndex((item) => item.id === over.id);
-
-    // if (activeIndex === -1 || overIndex === -1) return;
-
-    /* if (activeIndex === -1 || overIndex === -1) {
-      //   console.log("index with -1");
-      console.log("activeindex", activeIndex);
-      console.log("overindex", overIndex);
-    } */
+    const activeType = active.data.current.type;
+    const overType = over.data.current.type;
+    const activeContainer = active.data.current.containerId;
+    const overContainer = over.data.current.containerId || over.data.current.columnId;
 
     if (activeType === "ITEMS" && overType === "ITEMS") {
-      if (activeContainer === overContainer && activeIndex !== -1 && overIndex !== -1) {
+      const activeIndex = items.findIndex((item) => item.id === active.id);
+      const overIndex = items.findIndex((item) => item.id === over.id);
+      if (activeIndex === -1 || overIndex === -1) return;
+
+      if (activeContainer === overContainer) {
         setItems((prevData) => arrayMove(prevData, activeIndex, overIndex));
       } else {
-        // console.log(filteredItems);
-        // console.log(activeIndex);
-        // console.log(overIndex);
         setItems((prevData) => {
+          const updatedIndex = overIndex === 0 ? 0 : overIndex - 1;
           const updatedItems = prevData.map((item) => (item.id === active.id ? { ...item, containerId: overContainer } : item));
-          return arrayMove(updatedItems, activeIndex, overIndex - 1);
+          return arrayMove(updatedItems, activeIndex, updatedIndex);
         });
       }
     } else if (activeType === "ITEMS" && overType === "CONTAINER" && activeContainer !== overContainer) {
-      //   console.log("active");
+      // if (activeIndex === -1 || overIndex === -1) return;
+
+      const activeIndex = items.findIndex((item) => item.id === active.id);
       setItems((prevData) => {
         const updatedItems = prevData.map((item) => (item.id === active.id ? { ...item, containerId: overContainer } : item));
-        const newItemIndex = updatedItems.length;
+        const newItemIndex = updatedItems.length - 1;
         return arrayMove(updatedItems, activeIndex, newItemIndex);
       });
     }
