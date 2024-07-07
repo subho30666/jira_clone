@@ -13,7 +13,7 @@ function App() {
       <ToastProvider>
         <BrowserRouter>
           <Routes>
-            <Route path="/jira_clone" element={<Home />}></Route>
+            <Route path="/" element={<Home />}></Route>
             <Route path="/project" element={<NavbarOutlet />}>
               <Route path="/project" element={<Project />}>
                 <Route path="/project/board" element={<Board />}>
