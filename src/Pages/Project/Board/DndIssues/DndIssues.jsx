@@ -22,6 +22,7 @@ function DndIssues() {
 
   useEffect(() => {
     handleNameChange();
+    // throw new Error("this is a test error");
 
     const handleStorageEvent = () => {
       // console.log("localStorageUpdated event triggered");
