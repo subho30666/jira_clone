@@ -11,7 +11,7 @@ function SearchIssues({ show, onClose, children }) {
 
   useEffect(() => {
     const query = searchQuery.toLowerCase();
-    const result = issues.filter((issue) => issue.title.toLowerCase().includes(query) || issue.description.toLowerCase().includes(query));
+    const result = issues.filter((issue) => (issue.title && issue.title.toLowerCase().includes(query)) || (issue.description && issue.description.toLowerCase().includes(query)));
     setFilteredIssues(result);
   }, [searchQuery, issues]);
 
@@ -35,15 +35,17 @@ function SearchIssues({ show, onClose, children }) {
         <Input placeholder="Search issues by summary, description" value={searchQuery} onChange={handleInputChange} />
         <SubText>Issues</SubText>
 
-        {filteredIssues.map((issue) => (
-          <StyledIssues key={issue.id} to={`/project/board/${issue.id}`} onClick={handleClose}>
-            <ItemIcon icon={issue.type.value} size={"25px"} />
-            <Flex>
-              <Text>{issue.title}</Text>
-              <Text>id: {issue.id}</Text>
-            </Flex>
-          </StyledIssues>
-        ))}
+        {filteredIssues.map((issue) =>
+          issue.id && issue.type && issue.type.value ? (
+            <StyledIssues key={issue.id} to={`/project/board/${issue.id}`} onClick={handleClose}>
+              <ItemIcon icon={issue.type.value} size={"25px"} />
+              <Flex>
+                <Text>{issue.title || "No title"}</Text>
+                <Text>id: {issue.id}</Text>
+              </Flex>
+            </StyledIssues>
+          ) : null
+        )}
       </ModalContainer>
     </Overlay>
   );
