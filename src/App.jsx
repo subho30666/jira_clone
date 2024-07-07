@@ -6,7 +6,6 @@ import Project from "./Pages/Project";
 import Board from "./Pages/Project/Board";
 import ProjectSettings from "./Pages/Project/ProjectSettings";
 import NotFound from "./Pages/NotFound";
-// import { ErrorBoundary } from "./Pages/Error/index";
 import ErrorBoundary from "./Pages/Error";
 import IssuesOnClickModal from "./Pages/IssuesOnClickModal";
 import { ToastProvider } from "./components/Toast";
