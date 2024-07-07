@@ -1,0 +1,151 @@
+import { description } from "./description";
+export const users = [
+	{
+		id: 1,
+		email: "gloober@jira.test",
+		name: "Giggles Gloober",
+		avatarUrl: "https://pics.craiyon.com/2023-10-29/c1722175fe064a12836c52bdf093351c.webp",
+	},
+	{
+		id: 2,
+		email: "baron@jira.test",
+		name: "Bonkers Baron",
+		avatarUrl: "https://pics.craiyon.com/2023-12-02/iB64u6STSeOPItoTsdydbw.webp",
+	},
+	{
+		id: 3,
+		email: "quant@jira.test",
+		name: "Captain Quant",
+		avatarUrl: "https://pics.craiyon.com/2023-11-02/1e63995285044fcfb3ed62912bfefb4d.webp",
+	},
+];
+
+export const container = [
+	{
+		id: "backlog",
+	},
+	{
+		id: "selected for development",
+	},
+	{
+		id: "in progress",
+	},
+	{
+		id: "done",
+	},
+];
+
+export const project = {
+	name: "Kanban",
+	url: "https://www.google.in",
+	description: "Hello my friends",
+	project: { value: "business", label: "Business" },
+};
+
+export const comments = [
+	{
+		id: 1,
+		body: "Comment body",
+		issueId: 1,
+		userId: 1,
+	},
+];
+
+export const items = [
+	{
+		id: 1,
+		title: "This is an issue of type: Task.",
+		containerId: "backlog",
+		type: { value: "task", label: "Task" },
+		description: description[0],
+		status: { value: "backlog", label: "Backlog" },
+		priority: { value: "highest", label: "Highest" },
+		reporterId: { value: "Captain Quant", label: "Captain Quant" },
+		assignees: { value: "Giggles Gloober", label: "Giggles Gloober" },
+		originalEta: 6,
+		timeTracking: { initial: null, final: null },
+		display: true,
+		lastUpdated: null,
+		comments: "Click To Comment",
+	},
+	{
+		id: 2,
+		title: "Click on an issue to see what's behind it.",
+		containerId: "backlog",
+		type: { value: "bug", label: "Bug" },
+		description: description[1],
+		status: { value: "backlog", label: "Backlog" },
+		priority: { value: "high", label: "High" },
+		reporterId: { value: "Giggles Gloober", label: "Giggles Gloober" },
+		assignees: { value: "Giggles Gloober", label: "Giggles Gloober" },
+		originalEta: 1,
+		timeTracking: { initial: null, final: null },
+		display: true,
+		lastUpdated: null,
+		comments: "Click To Comment",
+	},
+	{
+		id: 3,
+		title: "You can use rich text with images in issue descriptions.",
+		containerId: "selected for development",
+		type: { value: "story", label: "Story" },
+		description: description[4],
+		status: { value: "backlog", label: "Backlog" },
+		priority: { value: "medium", label: "Medium" },
+		reporterId: { value: "Captain Quant", label: "Captain Quant" },
+		assignees: { value: "Bonkers Baron", label: "Bonkers Baron" },
+		originalEta: 2,
+		timeTracking: { initial: null, final: null },
+		display: true,
+		lastUpdated: null,
+		comments: "Click To Comment",
+	},
+	{
+		id: 4,
+		title: "Each issue can be assigned priority from lowest to highest.",
+		containerId: "selected for development",
+		type: { value: "task", label: "Task" },
+		description: description[2],
+		status: { value: "backlog", label: "Backlog" },
+		priority: { value: "low", label: "Low" },
+		reporterId: { value: "Captain Quant", label: "Captain Quant" },
+		assignees: { value: "Captain Quant", label: "Captain Quant" },
+		originalEta: 5,
+		timeTracking: { initial: null, final: null },
+		display: true,
+		lastUpdated: null,
+		comments: "Click To Comment",
+	},
+	{
+		id: 5,
+		title: "Try dragging issues to different columns to transition their status.",
+		containerId: "in progress",
+		type: { value: "story", label: "Story" },
+		description: description[3],
+		status: { value: "backlog", label: "Backlog" },
+		priority: { value: "lowest", label: "Lowest" },
+		reporterId: { value: "Captain Quant", label: "Captain Quant" },
+		assignees: { value: "Captain Quant", label: "Captain Quant" },
+		originalEta: 100,
+		timeTracking: { initial: null, final: null },
+		display: true,
+		lastUpdated: null,
+		comments: "Click To Comment",
+	},
+	{
+		id: 6,
+		title: "Try leaving a comment on this issue.",
+		containerId: "done",
+		type: { value: "bug", label: "Bug" },
+		description: description[5],
+		status: { value: "backlog", label: "Backlog" },
+		priority: { value: "lowest", label: "Lowest" },
+		reporterId: { value: "Bonkers Baron", label: "Bonkers Baron" },
+		assignees: { value: "Bonkers Baron", label: "Bonkers Baron" },
+		originalEta: 1,
+		timeTracking: { initial: null, final: null },
+		display: false,
+		lastUpdated: null,
+		comments: "This Is a Comment",
+	},
+];

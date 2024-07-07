@@ -1,0 +1,47 @@
+{
+	"name": "jira",
+	"private": true,
+	"version": "1.0.0",
+	"type": "module",
+	"author": "Subhendu",
+	"scripts": {
+		"dev": "vite",
+		"build": "vite build",
+		"lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+		"preview": "vite preview",
+		"lint:css": "stylelint 'src/**/*.{css,js}'",
+		"lint:css:fix": "stylelint 'src/**/*.{css,js}' --fix"
+	},
+	"dependencies": {
+		"@dnd-kit/core": "^6.1.0",
+		"@dnd-kit/modifiers": "^7.0.0",
+		"@dnd-kit/sortable": "^8.0.0",
+		"@dnd-kit/utilities": "^3.2.2",
+		"formik": "^2.4.6",
+		"nanoid": "^5.0.7",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0",
+		"react-icons": "^5.2.1",
+		"react-quill": "^2.0.0",
+		"react-router-dom": "^6.23.1",
+		"react-select": "^5.8.0",
+		"styled-components": "^6.1.11",
+		"styled-normalize": "^8.1.1",
+		"yup": "^1.4.0"
+	},
+	"devDependencies": {
+		"@types/react": "^18.2.66",
+		"@types/react-dom": "^18.2.22",
+		"@vitejs/plugin-react": "^4.2.1",
+		"eslint": "^8.57.0",
+		"eslint-plugin-react": "^7.34.1",
+		"eslint-plugin-react-hooks": "^4.6.0",
+		"eslint-plugin-react-refresh": "^0.4.6",
+		"postcss-styled-syntax": "^0.6.4",
+		"stylelint": "^16.6.1",
+		"stylelint-config-standard": "^36.0.0",
+		"stylelint-order": "^6.0.4",
+		"stylelint-processor-styled-components": "^1.0.0",
+		"vite": "^5.2.0"
+	}
+}
