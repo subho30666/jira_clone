@@ -14,7 +14,7 @@ function App() {
   return (
     <>
       <ToastProvider>
-        <BrowserRouter basename="/jira_clone">
+        <BrowserRouter>
           <ErrorBoundary>
             <Routes>
               <Route path="/" element={<Home />}></Route>
