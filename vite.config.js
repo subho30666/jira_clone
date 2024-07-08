@@ -1,8 +1,8 @@
 import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
 
+// https://vitejs.dev/config/
 export default defineConfig({
-  base: "/", // Root path for Netlify deployment
-  build: {
-    outDir: "dist", // Output directory for the build
-  },
+  plugins: [react()],
+  base: "/jira_clone/", // Set to your GitHub repository name
 });
