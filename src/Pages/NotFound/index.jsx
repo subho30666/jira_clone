@@ -38,7 +38,7 @@ const NotFound = () => {
     <NotFoundContainer>
       <Title>404</Title>
       <Message>Oops! The page you’re looking for doesn’t exist.</Message>
-      <BackLink href="/">Go back to Jira Home</BackLink>
+      <BackLink href="https://subho30666.github.io/jira_clone">Go back to Jira Home</BackLink>
     </NotFoundContainer>
   );
 };
