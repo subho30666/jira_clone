@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="1080" height="1080" viewBox="0 0 1080 1080" xml:space="preserve">
+<desc>Created with Fabric.js 5.2.4</desc>
+<defs>
+</defs>
+<g transform="matrix(1 0 0 1 540 540)" id="85f23077-bd31-402b-a601-1a98dc18e104"  >
+</g>
+<g transform="matrix(1 0 0 1 540 540)" id="e9f63fce-034b-46f5-bfeb-4af2dbd6ad86"  >
+<rect style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(255,255,255); fill-rule: nonzero; opacity: 1; visibility: hidden;" vector-effect="non-scaling-stroke"  x="-540" y="-540" rx="0" ry="0" width="1080" height="1080" />
+</g>
+<g transform="matrix(45 0 0 45 540 540)"  >
+<path style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(37,128,248); fill-rule: nonzero; opacity: 1;" vector-effect="non-scaling-stroke"  transform=" translate(-12, -12)" d="M 0.775 12.675 C 6.933 18.877 3.641 15.558 12.022 24 C 21.835 14.118 20.929000000000002 15.016 20.024 15.912 C 19.306 16.623 18.59 17.335 23.222 12.670000000000002 C 23.593 12.300000000000002 23.593 11.700000000000001 23.222 11.329000000000002 L 23.222 11.330000000000002 C 19.841 7.922 15.364 3.366 12.022 0 C 4.346 7.73 0.775 11.33 0.775 11.33 C 0.408 11.7 0.408 12.3 0.775 12.675 L 0.775 12.675 z M 12.02 8.452 L 15.546 12 L 12.020999999999999 15.548 L 8.495 12 L 12.02 8.452 L 12.02 8.452 z" stroke-linecap="round" />
+</g>
+<g transform="matrix(45 0 0 45 284.78 540)"  >
+<path style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(32,111,216); fill-rule: nonzero; opacity: 1;" vector-effect="non-scaling-stroke"  transform=" translate(-6.25, -12)" d="M 12 0.022 C 4.339 7.737 0.775 11.33 0.775 11.33 C 0.40900000000000003 11.7 0.40900000000000003 12.3 0.775 12.675 C 6.928 18.872 3.646 15.564 12 23.978 L 12 15.527000000000001 L 8.495 12 L 12 8.473 L 12 0.022 L 12 0.022 z" stroke-linecap="round" />
+</g>
+</svg>
