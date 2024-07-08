@@ -13,9 +13,6 @@ function TopMenu({ children, ...rest }) {
   const [isCaptainQuantFiltered, setIsCaptainQuantFiltered] = useState(false);
   const [isRecentlyUpdatedFiltered, setIsRecentlyUpdatedFiltered] = useState(false);
 
-  const CopyLinkButton = () => {
-    navigator.clipboard.writeText(fullUrl);
-  };
   const handleAvatarClick = useCallback((user) => {
     setSelectedUsers((prevSelected) => {
       const newSet = new Set(prevSelected);
@@ -151,7 +148,7 @@ function TopMenu({ children, ...rest }) {
         <MenuItem style={{ display: "flex", marginTop: "20px" }}>
           <h2 style={{ padding: "0", margin: "0" }}>Kanban Board</h2>
 
-          <Button style={{ marginLeft: "auto", display: "flex", alignItems: "center" }} onClick={() => CopyLinkButton()}>
+          <Button style={{ marginLeft: "auto", display: "flex", alignItems: "center" }} onClick={() => (window.location.href = fullUrl)}>
             <GithubIcon />
             Github Repo
           </Button>
