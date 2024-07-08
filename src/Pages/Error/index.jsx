@@ -57,7 +57,7 @@ const ErrorPage = ({ error }) => (
     <ErrorTitle>500</ErrorTitle>
     <ErrorSubtitle>Oops! Something went wrong.</ErrorSubtitle>
     <ErrorMessage>{error || "An unexpected error occurred. Please try again later."}</ErrorMessage>
-    <BackLink href="/">Go back to Home</BackLink>
+    <BackLink href="https://subho30666.github.io/jira_clone">Go back to Home</BackLink>
   </ErrorContainer>
 );
 
