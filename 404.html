@@ -47,9 +47,11 @@
       <p><a href="/">Go back to Jira Home</a></p>
     </div>
     <script>
-      // Script to handle the redirect for GitHub Pages
-      var redirectTo = window.location.pathname.split("/").slice(1).join("/");
-      window.location.href = "/" + redirectTo;
+      // Redirect to the base path, e.g., /jira_clone/ if not already there
+      const basePath = "/jira_clone/";
+      if (!window.location.pathname.startsWith(basePath)) {
+        window.location.href = basePath + window.location.pathname;
+      }
     </script>
   </body>
 </html>
