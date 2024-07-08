@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Page Not Found</title>
     <style>
       body {
@@ -13,38 +14,47 @@
         background-color: #f5f5f5;
         font-family: Arial, sans-serif;
       }
+
       .container {
         text-align: center;
-        padding: 20px;
-        background: white;
+        padding: 50px;
+        background-color: white;
         border-radius: 8px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
       }
-      h1 {
-        font-size: 4rem;
+
+      .title {
+        font-size: 100px;
         margin: 0;
-        color: #ff4d4d;
-      }
-      p {
-        font-size: 1.5rem;
         color: #333;
-        margin: 20px 0;
       }
-      a {
-        color: #007bff;
+
+      .message {
+        font-size: 24px;
+        color: #666;
+      }
+
+      .back-link {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 10px 20px;
         text-decoration: none;
+        color: #fff;
+        background-color: #007bff;
+        border-radius: 5px;
         font-weight: bold;
-      }
-      a:hover {
-        text-decoration: underline;
+
+        &:hover {
+          background-color: #0056b3;
+        }
       }
     </style>
   </head>
   <body>
     <div class="container">
-      <h1>404</h1>
-      <p>Sorry, the page you are looking for does not exist.</p>
-      <p><a href="/jira_clone/">Go back to home</a></p>
+      <div class="title">404</div>
+      <p class="message">Oops! The page you’re looking for doesn’t exist.</p>
+      <a class="back-link" href="/jira_clone">Go back to Jira Home</a>
     </div>
   </body>
 </html>
