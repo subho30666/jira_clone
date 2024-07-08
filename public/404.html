@@ -44,10 +44,10 @@
     <div class="container">
       <h1>404</h1>
       <p>Sorry, the page you are looking for does not exist.</p>
-      <p><a href="/">Go back to Jira Home</a></p>
+      <p><a href="/">Go back to home</a></p>
     </div>
     <script>
-      // Redirect to the base path, e.g., /jira_clone/ if not already there
+      // Ensure the redirect goes to the base path of the GitHub Pages site
       const basePath = "/jira_clone/";
       if (!window.location.pathname.startsWith(basePath)) {
         window.location.href = basePath + window.location.pathname;
