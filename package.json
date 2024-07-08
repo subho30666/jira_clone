@@ -12,8 +12,7 @@
     "preview": "vite preview",
     "lint:css": "stylelint 'src/**/*.{css,js}'",
     "lint:css:fix": "stylelint 'src/**/*.{css,js}' --fix"
-  
-},
+  },
   "dependencies": {
     "@dnd-kit/core": "^6.1.0",
     "@dnd-kit/modifiers": "^7.0.0",
