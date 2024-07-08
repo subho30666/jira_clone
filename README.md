@@ -9,7 +9,7 @@
 
 ![Tech logos](https://i.ibb.co/Mf65K5b/1.png)
 
-![App screenshot](https://i.ibb.co/jwDqLqn/Image1.png)
+![App screenshot](https://i.ibb.co/fpZJmnz/Image-1.png)
 
 ## What is this and who is it for 🤷‍♀️
 
